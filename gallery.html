@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Gallery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+<style>
+* {
+  box-sizing: border-box;}
+body {
+  font-family: Arial;
+   background-color: #ffe6e6;}
+h1{font-size: 60px;
+  text-align:center;
+  color:#A61942;}
+h2{font-size: 30px;
+  text-align:center;
+  color:#A61942;}
+.topnav{ 
+           background-color:#BB6F85 ;
+           overflow: hidden;
+           margin: -0.6%;
+           padding: 0;
+           position: fixed;
+           top: 0;
+           width: 100%;
+           float: left;}
+        .topnav a{
+           float: left;
+           display: block;
+           color: #f2f2f2;
+           text-align: left;
+           position: relative;
+           left: 200px;
+           padding: 8px 16px;
+           text-decoration: none;
+           font-size: 30px;}
+        .topnav a:hover{
+           background-color: #c22853;}
+.row{
+  display: flex;
+  flex-direction: column;
+}
+.fiveimg{
+  display: flex;
+  flex-direction: row;
+}
+.column {
+ float: left;
+ padding-left: 2%;
+ padding-bottom: 0.5%;
+  width: 19%;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+   background-image: url("https://mybleuevents.com/wp-content/uploads/2018/10/wedding-planner-background-8FHTBRM.jpg");
+   background-repeat:no-repeat;
+   background-size:1600px 800px;
+}
+.modal-content {
+  position: relative;
+  background-color: white; 
+  margin: auto;
+  padding: 10px;
+  width: 60%;
+  max-width: 1200px;
+}
+.close {
+  color: white;
+  position: absolute;
+  top: 5px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+.mySlides {
+  display: none;
+}
+.cursor {
+  cursor: pointer;
+}
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 97.5%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.prev {
+  position: relative;
+  left: 25%;
+  bottom: 0px;
+  border-radius: 3px 0 0 3px;
+  color: black;
+}
+.next {
+  position: relative;
+  left: 65%;
+  bottom: 0px;
+  border-radius: 3px 0 0 3px;
+  color: black;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.numbertext {
+  color: #f2f2f2;
+  font-size: 18px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 5%;
+}
+img {
+  margin-bottom: -4px;
+}
+.caption-container {
+  text-align: center;
+  background-color: #ff9999;
+  padding:2px 16px;
+  color: white;
+}
+.demo {
+  opacity: 0.6;
+}
+.active,
+.demo:hover {
+  opacity: 1;
+}
+img.hover-shadow {
+  transition: 0.3s;
+}
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+  .logo{
+    overflow: hidden;
+    margin: -0.6%;
+    padding: 0;
+    float: left;
+    position: fixed;
+    top: 0;
+    z-index: 1;}
+    .column::before,.column::after,.hover-shadow cursor{
+        top: -100%;
+        width: 100%;
+        height: 200%;
+        display: block;
+        position: absolute;
+        z-index: -1;
+    }
+    .column:hover {
+        opacity: 1;
+        transition: all 0.3s ease-in-out;
+        transform: scale(1.2);
+        z-index: 99;
+        overflow: hidden;
+    }
+    .column:before {
+        content: '';
+        position: absolute;
+        opacity: 0.4;
+        width: 350px;
+        height: 70px;
+        background: pink;
+        top: 50;
+        left: 0;
+        z-index: 1;
+        transform: rotate(180deg);
+        transition: transform 10s;
+    }
+    .column:hover:before {
+        transform: translate(-100px, 600%) rotate(180deg);
+        transition: transform 0.5s;
+    }
+</style>
+<body>
+  <div>
+    <img class="logo" src="TWILIGHTLOGO.png" width="180px" height="50px" align="left">
+<div class="topnav">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="about.html">About us</a>
+</div></div>
+<h1>GALLERY</h1>
+<hr>
+<div class="row">
+  <div id="fiveimg">
+  <div class="column">
+    <img src="https://www.sandals.com/blog/content/images/2019/11/Beaches-Turks-and-Caicos-Beach-Wedding2.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="https://www.prismindiaevents.com/wp-content/uploads/2019/10/birthday-thme-in-dhaka.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="https://www.pinkblueindia.com/blog/wp-content/uploads/2014/08/baby-shower-theme.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="https://www.indiafilings.com/learn/wp-content/uploads/2018/11/The-Indian-Christian-Marriage-Act.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="https://www.tnp.sg/sites/default/files/styles/rl680/public/articles/2015/05/10/NP_20150510_HYCRADLE-8I9_857319.jpg?itok=cusRvzZo" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+  </div>
+</div>
+<div class="fiveimg">
+  <div class="column">
+    <img src=" https://myudaipurcity.com/wp-content/uploads/2017/10/Best-Event-Management-Companies-in-Udaipur.jpg" style="width:100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="https://www.oyorooms.com/blog/wp-content/uploads/2018/03/fe-30.jpg" style="width:100%" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTnrrJJMbwamb2WOaiWnNTK6WIVpG1J3OnbtQ&usqp=CAU" style="width:100%" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="https://www.amandacrean.com/wp-content/uploads/2018/02/8-napa-valley-wedding-haldi.jpg" style="width:100%" onclick="openModal();currentSlide(9)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="https://d3lzjswxslh72s.cloudfront.net/article-2015513114300652206000.jpg" style="width:100%" onclick="openModal();currentSlide(10)" class="hover-shadow cursor">
+  </div>
+</div>
+</div>
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 10</div><p><a href="https://www.google.com/maps/place/The+Sands+at+Grace+Bay/@21.7943445,-72.221851,13z/data=!4m11!1m2!2m1!1sturks+and+caicos+islands+beach!3m7!1s0x894b4fa0c33a92d3:0xbdab55ee55990cbe!5m2!4m1!1i2!8m2!3d21.7943482!4d-72.1868314">
+      <img src="https://www.sandals.com/blog/content/images/2019/11/Beaches-Turks-and-Caicos-Beach-Wedding2.jpg" style="width:100%"></a></p>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 10</div><p><a href="https://www.google.com/maps/dir/27.204287,77.9624324/goa+convention+hall+for+birthday+party/@21.3068734,71.4865181,6z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3bbfc013136d3fcb:0x88709ab609d327e5!2m2!1d73.825864!2d15.529212">
+      <img src="https://www.prismindiaevents.com/wp-content/uploads/2019/10/birthday-thme-in-dhaka.jpg" style="width:100%"></a></p>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 10</div><p><a href="https://www.google.com/maps/dir/27.204287,77.9624324/kolkata+party+hall/@24.8044696,78.6654914,6z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3a0277db79eb3df7:0x872001fbe37e40da!2m2!1d88.3618049!2d22.5171428">
+      <img src="https://www.pinkblueindia.com/blog/wp-content/uploads/2014/08/baby-shower-theme.jpg" style="width:100%"></a></p>
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">4 / 10</div><p><a href="https://www.google.com/maps/dir/27.204287,77.9624324/bengaluru+convention+hall/@20.0361676,73.947669,6z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3bae1662bac4b281:0x55701482d66e9d5d!2m2!1d77.6069879!2d12.9799411">
+      <img src="https://www.indiafilings.com/learn/wp-content/uploads/2018/11/The-Indian-Christian-Marriage-Act.jpg" style="width:100%"></a></p>
+    </div>
+	 <div class="mySlides">
+      <div class="numbertext">5/ 10</div><p><a href="https://www.google.com/maps/dir//kerala+party+hall/@10.1617512,76.3210438,12z/data=!3m1!4b1!4m9!4m8!1m1!4e2!1m5!1m1!1s0x3b08062312faaaab:0xa0d122fbfbee4954!2m2!1d76.3910844!2d10.1617586">
+      <img src="https://www.tnp.sg/sites/default/files/styles/rl680/public/articles/2015/05/10/NP_20150510_HYCRADLE-8I9_857319.jpg?itok=cusRvzZo" style="width:100%"></a></p>
+    </div>
+	<div class="mySlides">
+      <div class="numbertext">6/ 10</div><p><a href="https://www.google.com/maps/dir/27.204287,77.9624324/City+Palace,+Udaipur,+Rajasthan+313001/@25.8741097,73.5781209,7z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3967e5640659a7d5:0x9257af76faeaab0e!2m2!1d73.6835109!2d24.5764421">
+      <img src=" https://myudaipurcity.com/wp-content/uploads/2017/10/Best-Event-Management-Companies-in-Udaipur.jpg" style="width:100%"></a></p>
+    </div>
+	<div class="mySlides">
+      <div class="numbertext">7/ 10</div><p><a href="https://www.google.com/maps/dir/27.204287,77.9624324/mumbai+conferrence+hall/@23.1309841,71.0859352,6z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3be7b902fa4d13ad:0xe7fefe8fe301938f!2m2!1d72.9556243!2d19.1864811">
+      <img src="https://www.oyorooms.com/blog/wp-content/uploads/2018/03/fe-30.jpg" style="width:100%"></a></p>
+    </div>
+	<div class="mySlides">
+      <div class="numbertext">8/ 10</div><p><a href="https://www.google.com/maps/dir/27.204287,77.9624324/chennai+birthday+party+hall/@20.1150823,74.8450222,6z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3a5264664e4ed6bd:0x45d6cf2ce27d7eb8!2m2!1d80.2063574!2d13.117891">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTnrrJJMbwamb2WOaiWnNTK6WIVpG1J3OnbtQ&usqp=CAU" style="width:100%"></a></p>
+    </div>
+	<div class="mySlides">
+      <div class="numbertext">9/ 10</div><p><a href="https://www.google.com/maps/dir/27.204287,77.9624324/mangalore+party+hall/@19.9997354,72.1860168,6z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3ba35a06649f0a7b:0x1d0a15a1a43e8832!2m2!1d74.8649561!2d12.906345">
+      <img src="https://www.amandacrean.com/wp-content/uploads/2018/02/8-napa-valley-wedding-haldi.jpg" style="width:100%"></a></p>
+    </div><div class="mySlides">
+      <div class="numbertext">10/ 10</div><p><a href="https://www.google.com/maps/dir/27.204287,77.9624324/bhopal+wedding+place/@25.1384163,75.6729236,7z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x397c46f5da1e7243:0x8b9aac68ea006cd2!2m2!1d77.498158!2d23.120999">
+      <img src="https://d3lzjswxslh72s.cloudfront.net/article-2015513114300652206000.jpg" style="width:100%"></a></p>
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+    <div class="row">
+    <div id="fiveimg">
+    <div class="column">
+      <img class="demo cursor" src="https://cdn0.hitched.co.uk/articles/images/1/5/6/2/img_22651/r10_2x_engagement-cake-topper-4THUMBNAIL-affcd22.jpg" style="width:100%" onclick="currentSlide(1)" alt="
+TURKS AND CAICOS ISLANDS">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://www.prismindiaevents.com/wp-content/uploads/2019/10/birthday-thme-in-dhaka.jpg" style="width:100%" onclick="currentSlide(2)" alt="GOA">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://www.pinkblueindia.com/blog/wp-content/uploads/2014/08/baby-shower-theme.jpg" style="width:100%" onclick="currentSlide(3)" alt="KOLKATA">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://www.indiafilings.com/learn/wp-content/uploads/2018/11/The-Indian-Christian-Marriage-Act.jpg" style="width:100%" onclick="currentSlide(4)" alt="BENGALURU">
+    </div>
+	 <div class="column">
+      <img class="demo cursor" src="https://www.tnp.sg/sites/default/files/styles/rl680/public/articles/2015/05/10/NP_20150510_HYCRADLE-8I9_857319.jpg?itok=cusRvzZo" style="width:100%" onclick="currentSlide(5)" alt="Nedumbassery, Kerala">
+    </div>
+    </div>
+      <div id="fiveimg">
+	<div class="column">
+      <img class="demo cursor" src=" https://myudaipurcity.com/wp-content/uploads/2017/10/Best-Event-Management-Companies-in-Udaipur.jpg" style="width:100%" onclick="currentSlide(6)" alt="UDAIPUR">
+    </div>
+	<div class="column">
+      <img class="demo cursor" src="https://www.oyorooms.com/blog/wp-content/uploads/2018/03/fe-30.jpg" style="width:100%" onclick="currentSlide(7)" alt="MUMBAI">
+    </div>
+	<div class="column">
+      <img class="demo cursor" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTnrrJJMbwamb2WOaiWnNTK6WIVpG1J3OnbtQ&usqp=CAU" style="width:100%" onclick="currentSlide(8)" alt="CHENNAI">
+    </div>
+	<div class="column">
+      <img class="demo cursor" src="https://www.amandacrean.com/wp-content/uploads/2018/02/8-napa-valley-wedding-haldi.jpg" style="width:100%" onclick="currentSlide(9)" alt="MANGALORE">
+    </div>
+	<div class="column">
+      <img class="demo cursor" src="https://d3lzjswxslh72s.cloudfront.net/article-2015513114300652206000.jpg" style="width:100%" onclick="currentSlide(10)" alt="BHOPAL">
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+<script>
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script> 
+</body>
+<style>
+  footer{
+    position: absolute;
+    text-align: center;
+    left: 650px;
+    bottom: 0px;}
+  .fa {
+    padding: 15px;
+    font-size: 15px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+}
+.fa:hover {
+    opacity: 0.7;
+}
+.fa-facebook{
+    background: #3B5998;
+    color: white;
+}
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+.fa-instagram {
+  background: #ef06f7f5;
+  color: white;
+}
+.fa-snapchat-ghost {
+  background: #fffc00;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+</style>
+<footer>
+  <hr>
+      <a href="https://www.facebook.com/pg/Raihan-shaik-330497147469195/about/" class="fa fa-facebook"></a>
+      <a href="https://twitter.com/AbhivyktiJ" class="fa fa-twitter"></a>
+      <a href="https://www.instagram.com/raihan_shelby/" class="fa fa-instagram"></a>
+      <a href="https://www.snapchat.com/add/sushmita260101" class="fa fa-snapchat-ghost"></a>
+      <a href="https://www.linkedin.com/in/abhivykti-jain-746151184/" class="fa fa-linkedin"></a>
+</footer>
+</html>

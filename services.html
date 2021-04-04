@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Services</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+  * {
+  box-sizing: border-box;}
+body {
+  font-family: Arial;
+   background:  linear-gradient(to bottom right, #ffffff 14%, #66ccff 100%);}
+h1 {
+  font-size: 50px;
+  text-align:center;
+  color:#A61942;
+  padding-top: 15px;
+}
+h2 {
+  font-size: 30px;
+  text-align:center;
+  color:#A61942;
+}
+h3 {
+  text-align:center;
+  color:#993333;
+}
+
+.row {
+  margin: 8px -16px;
+}
+
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.content {
+  background-color: white;
+  padding: 10px;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+.topnav{ 
+  background-color:#BB6F85 ;
+  overflow: hidden;
+  margin: -0.6%;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  float: left;
+}
+.topnav a{
+  float: left;
+  display: block;
+  color: #ffffff;
+  text-align: left;
+  position: relative;
+  left: 200px;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-size: 30px;
+}
+.topnav a:hover{
+  background-color: #c22853;
+  }
+footer{
+    text-align: center;
+    position: relative;
+    bottom: 0px;
+  }
+  .fa {
+    padding: 15px;
+    font-size: 15px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+}
+.fa:hover {
+    opacity: 0.7;
+}
+.fa-facebook{
+    background: #3B5998;
+    color: white;
+}
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+.fa-instagram {
+  background: #ef06f7f5;
+  color: white;
+}
+.fa-snapchat-ghost {
+  background: #fffc00;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+* {
+  box-sizing: border-box;
+}
+
+.modal1{
+background:linear-gradient(to bottom right, #ffffff -8%, #660033 100%);
+  display: none; 
+  position: fixed;
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width:100%;
+  height:100%;
+  overflow: auto; 
+  padding-top: 50px;}
+.modal1-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto;
+  border: 1px solid #888;
+  width: 30%;}
+ hr {
+  border: 1px solid #000000;
+  margin-bottom: 25px;}
+ .close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;}
+.close:hover, .close:focus {
+  color: #f44336;
+  cursor: pointer;}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;}
+.bot{
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+left: 800px;
+position: absolute;
+top: 575px;}
+
+
+.modal2{
+background: linear-gradient(to bottom, #ffffff -14%, #660033 88%);
+  display: none; 
+  position: fixed;
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width:100%;
+  height:100%;
+  overflow: auto; 
+  padding-top: 50px;}
+.modal2-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto;
+  border: 1px solid #888;
+  width: 30%;}
+ hr {
+  border: 1px solid #000000;
+  margin-bottom: 25px;}
+ .close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;}
+.close:hover, .close:focus {
+  color: #f44336;
+  cursor: pointer;}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;} 
+.bot1{
+position: absolute;
+left: 800px;
+top: 1475px;
+transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  }
+
+.modal3{
+background:linear-gradient(to bottom, #ffffff -14%, #660033 88%);
+  display: none; 
+  position: fixed;
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width:100%;
+  height:100%;
+  overflow: auto; 
+  padding-top: 50px;}
+.modal3-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto;
+  border: 1px solid #888;
+  width: 30%;}
+
+ hr {
+  border: 1px solid #000000;
+  margin-bottom: 25px;}
+ .close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;}
+.close:hover, .close:focus {
+  color: #f44336;
+  cursor: pointer;}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;}
+
+  
+.bot2{
+position: absolute;
+left: 800px;
+top: 2250px;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+
+
+.logo{
+    overflow: hidden;
+    margin: -0.6%;
+    padding: 0;
+    float: left;
+    position: fixed;
+    top: 0;
+    z-index: 1;}
+    .final {
+      background-color: #545454;
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      color: #fbf7f0;
+      border: none;
+      cursor: pointer;
+      width: 100px;
+      height: 40px;
+      border-radius: 2%
+    }
+    .final:hover {
+      opacity: 0.8;
+      box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    }
+ 
+</style>
+</head>
+<body>
+  <div>
+    <img class="logo" src="TWILIGHTLOGO.png" width="180px" height="50px" align="left">
+<div class="topnav" >
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="about.html">About us</a>
+</div></div>
+ <h1>SERVICES</h1>
+<hr>
+<div class="row">
+<div class="content">
+   <h2><a>MARRIAGE</a></h2>
+  <img src="https://images.sadhguru.org/sites/default/files/media_files/importance-of-marriage.jpg" class="center">
+</div>
+<button align="center"><a href="booking marr.html"> BOOK FOR MARRIAGE NOW</a></button><br>
+
+<div class="row">
+<div class="content">
+   <h2>PRIVATE EVENTS</h2>
+  <img src="https://www.avantgardeevents.co.uk/wp-content/uploads/2019/02/private-party-organisers.jpg" class="center"> 
+</div>
+<button align="center"><a href="booking pvt.html"> BOOK FOR PRIVATE EVENTS NOW</a></button><br>
+<div class="row">
+<div class="content">
+   <h2>CORPORATE/FORMAL EVENTS</h2>
+  <img src="https://www.tagvenue.com/blog/wp-content/uploads/2016/05/No-11-Cavendish-Square-Burdett-01-London-space-for-hire-e1563456137303.jpg" class="center">
+ </div>
+ <button align="center"><a href="booking formal.html">BOOK FOR FORMAL EVENTS NOW</a></button><br>
+ <div class="bot">
+        <button onclick="document.getElementById('id01').style.display='block'"width="180px" height="40px" align="center">Click me</button></div>
+<div id="id01" class="modal1">
+          <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+		  <h2>TYPES OF WEDDING TASKS WE CONDUCT</h2>
+  <div class="column">
+    <div class="content">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTd_ciao9su08FA6dCaCcRnYhuQFiJUQJilFA&usqp=CAU" style="width:100%">
+      <h3>FULL PACKAGE WEDDING</h3>
+	  <h3>COST- 1,50,000</h3>
+	   </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img src="https://forevereventsportugal.com/wp-content/uploads/2018/11/Blog-Top-tips-for-your-Destination-Wedding-in-Portugal.jpg" style="width:100%">
+      <h3>DESTINATION WEDDING</h3>
+	  <h3>COST- 2,25,000</h3>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img src="https://img.thebridalbox.com/wp-content/uploads/2016/01/wedding-decoration.jpg" style="width:100%">
+      <h3>WEDDING DECORATION ONLY</h3>
+	  <h3>COST- 1,30,000</h3>
+    </div>
+  </div>
+</div>
+
+<script>
+            var modal1 = document.getElementById('id01');
+            window.onclick = function(event) {
+              if (event.target == modal1) {
+                modal1.style.display = "none";
+              }
+            }
+
+</script> 
+<div class="bot1">
+        <button onclick="document.getElementById('id02').style.display='block'"width="180px" height="40px" align="center">Click me</button></div>
+<div id="id02" class="modal2">
+          <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal2">&times;</span>
+		  <h2>TYPES OF PRIVATE EVENTS WE CONDUCT</h2>
+  <div class="column">
+    <div class="content">
+      <img src="https://www.dhresource.com/260x260/f2/albu/g6/M00/9D/E7/rBVaSFs_z0CAb8mOAAe8Y-NDaD4032.jpg" style="width:100%">
+      <h3>ENGAGEMENT</h3>
+	  <h3>COST- 1,10,000</h3>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img src="https://i.pinimg.com/564x/94/8f/46/948f4640c0f2f6db3190140b2ee685e5.jpg" style="width:100%">
+      <h3>ANNIVERSARY</h3>
+	  <h3>COST- 75,000</h3>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img src="https://images-na.ssl-images-amazon.com/images/I/61Wy1bntG1L._SL1050_.jpg" style="width:100%">
+      <h3>BIRTHDAY</h3>
+	  <h3>COST- 50,000</h3>
+    </div>
+  </div>
+
+</div>
+<script>
+            var modal2= document.getElementById('id02');
+            window.onclick = function(event) {
+              if (event.target == modal2) {
+                modal2.style.display = "none";
+              }
+            }
+</script> 
+<div class="bot2">
+        <button onclick="document.getElementById('id03').style.display='block'"width="180px" height="40px" align="center">Click me</button></div>
+<div id="id03" class="modal3">
+          <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal3">&times;</span>
+		  <h2>TYPES OF CORPORATE/FORMAL EVENTS WE CONDUCT</h2>
+  <div class="column">
+    <div class="content">
+      <img src="https://myareanetwork-photos.s3.amazonaws.com/editorphotos/f/23939_1509478842.jpeg" style="width:100%">
+      <h3>BUSINESS DINNERS</h3>
+	  <h3>COST- 1,15,000</h3>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img src="https://media-cdn.tripadvisor.com/media/photo-s/0f/0a/db/51/imperial-banquet-hall.jpg" style="width:100%">
+      <h3>PRODUCT LAUNCHES</h3>
+	  <h3>COST- 50,000</h3>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQQ6mSno7tuB19m7PEKTCHx6gnXB5WYCjrL1w&usqp=CAU" style="width:100%">
+      <h3>SUMMITS</h3>
+	  <h3>COST- 2,50,000</h3>
+    </div>
+  </div>
+ </div>
+<script>
+            var modal3= document.getElementById('id03');
+            window.onclick = function(event) {
+              if (event.target == modal3){
+                modal3.style.display = "none";
+              }
+            }
+</script> 
+</div>
+</div>
+<button class="final" style="background-color: red;margin-bottom:20px;position: relative; margin-left: 1200px;margin-top: 50px;"><a
+  style="text-decoration: none; color: white; " href="logout.php">Logout</a></button>
+</body>
+<footer>
+  <hr>
+      <a href="https://www.facebook.com/pg/Raihan-shaik-330497147469195/about/" class="fa fa-facebook"></a>
+      <a href="https://twitter.com/AbhivyktiJ" class="fa fa-twitter"></a>
+      <a href="https://www.instagram.com/raihan_shelby/" class="fa fa-instagram"></a>
+      <a href="https://www.snapchat.com/add/sushmita260101" class="fa fa-snapchat-ghost"></a>
+      <a href="https://www.linkedin.com/in/abhivykti-jain-746151184/" class="fa fa-linkedin"></a>
+</footer>
+</html>

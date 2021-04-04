@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<style>
+body{
+  font-family: arial;
+  background-image:url("https://cdn0.weddingwire.in/articles/images/9/7/3/4/img_14379/wedding-party-our-wedding-chapter-a-top-notch-seating-arrangement-is-a-must.jpg");
+background-repeat: no-repeat;
+background-size: 1600px 800px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.col-50 {
+  -ms-flex: 50%;
+  flex: 50%;
+}
+
+
+.container {
+  background-color: #c5e6fa;
+  width: 600px;
+  position: relative;
+  left: 500px;
+  top:65px;
+  border: 3px solid #335952;
+  padding: 30px;
+  align: center;
+}
+
+h1{
+font-family: arial;
+text-align: center;
+font-size: 54px;
+color: #041833;
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color:#ad5362;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color:#8a2838;
+}
+
+</style>
+<body>
+<div class="container">
+  <form action="booking.php" method="POST">
+    <h1>BOOKING</h1>
+    <input type="hidden" name="event" value="Marriage Event">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="firstname" required>
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="lastname" required>
+   <label for="Event type">Event type</label>
+    <select id="Event type" name="Eventtype">
+      <option value="Full package wedding">Full package wedding </option>
+      <option value="Destination wedding">Destination wedding</option>
+      <option value="Wedding decoration">Wedding decoration</option>
+    </select>
+    <input type="submit" value="Submit" name="submit">
+  </form>
+</div>
+
+</body>
+</html>
